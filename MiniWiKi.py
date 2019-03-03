@@ -7,7 +7,7 @@ def wiki(w):
     w=w.lower() #turn all character into lowercase
     if w in pap:
         return pap[w] #it will return real value
-    elif len(get_close_matches(w, pap.keys()))>0: #this condition check thw wrong word or misspell word 
+    elif len(get_close_matches(w, pap.keys())) > 0: #this condition check thw wrong word or misspell word 
         yn=input("Did you mean %s instead?\nEnter 'Y' if yes, or 'N' if no: " % get_close_matches(w, pap.keys())[0]) #first value of related word's key sequence
         if yn=='Y':
             return pap[get_close_matches(w, pap.keys())[0]] #return first word from the key sequence
